@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Birthday LOVE😘</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEARTS CONTAINER -->
+    <div id="hearts-container"></div>
+
+    <!-- =========================
+         PAGE 1 - PASSWORD
+    ========================== -->
+    <section class="page active" id="page1">
+
+        <div class="card password-card">
+
+            <div class="emoji">🎁</div>
+
+            <h1>A Little Surprise</h1>
+
+            <p>
+                Something special is waiting for you...
+            </p>
+
+            <p class="small-text">
+                Enter the secret password to continue ❤️
+            </p>
+
+            <input
+                type="password"
+                id="passwordInput"
+                placeholder="Enter password"
+            >
+
+            <button onclick="checkPassword()">
+                Unlock 🔐
+            </button>
+
+            <p id="passwordMessage"></p>
+
+        </div>
+
+    </section>
+
+    <!-- =========================
+        PAGE 2 - INTRODUCTION
+    ========================== -->
+    <section class="page" id="page2">
+
+        <div class="content">
+
+            <div class="emoji big">🎁</div>
+
+            <h1 class="title">
+                A Special Day For Someone Special ✨
+            </h1>
+
+            <p class="intro-text">
+                Today isn't just another day. It's a day to celebrate
+                your existence, your smile, your dreams, and all the
+                wonderful memories that make you who you are.
+            </p>
+
+            <p class="intro-text">
+                I wanted to create something a little different for your
+                birthday — something you could open, explore and remember
+                with a smile. So take a moment, enjoy this little surprise,
+                and let the next few pages tell the rest of the story. 💖
+            </p>
+
+            <p class="tap-hint">
+                ✨ Tap to move towards something new ✨
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+        PAGE 3 - CAKE
+    ========================== -->
+    <section class="page" id="page3">
+
+        <div class="content">
+
+            <h1>Make a Wish 🎂</h1>
+
+            <p class="instruction">
+                Tap the cake and blow the candles
+            </p>
+
+            <div id="countdown">
+                3
+            </div>
+
+
+            <!-- CAKE -->
+            <div
+                class="cake-area"
+            >
+
+                <!-- THREE CANDLES -->
+                <div class="candles">
+
+                    <div class="candle" id="candle1">
+                        <div class="flame"></div>
+                    </div>
+
+                    <div class="candle" id="candle2">
+                        <div class="flame"></div>
+                    </div>
+
+                    <div class="candle" id="candle3">
+                        <div class="flame"></div>
+                    </div>
+
+                </div>
+
+
+                <!-- CAKE -->
+                <div class="cake">
+
+                    <div class="cake-top"></div>
+
+                    <div class="cream"></div>
+
+                    <div class="cake-body"></div>
+
+                </div>
+
+            </div>
+
+
+            <!-- HAPPY BIRTHDAY -->
+            <div
+                id="birthdayMessage"
+                class="birthday-message"
+            >
+                HAPPY BIRTHDAY! 🎉
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+        PAGE 4 - VIDEO
+    ========================== -->
+    <section class="page" id="page4">
+
+        <div class="content video-page">
+
+            <h1 class="video-title">
+                ❤️ I LOVE YOU ❤️
+            </h1>
+
+            <p class="video-message">
+                Today is all about celebrating you and the happiness
+                you bring into the lives of the people who care about you. ✨
+            </p>
+
+
+            <!-- 9:16 VIDEO -->
+            <div class="video-section">
+
+                <video
+                    class="birthday-video"
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                    controls
+                >
+                    <source
+                        src="Screen_Recording_20260930_233337_Instagram_1.mp4"
+                        type="video/mp4"
+                    >
+                </video>
+
+            </div>
+
+
+            <p class="tap-hint">
+                ✨ Tap to move ahead ✨
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+        PAGE 5 - FINAL MESSAGE
+    ========================== -->
+    <section class="page" id="page5">
+
+        <div class="content final-page">
+
+            <div class="emoji big">
+                💖
+            </div>
+
+            <h1>
+                To The LOVE😘
+            </h1>
+
+            <div class="long-message">
+
+                <p>
+                    On your special day, I just want you to know how
+                    precious you are to me. Over time, you have become
+                    a very important part of my life, and the memories,
+                    conversations, laughter and little moments we have
+                    shared are things that I truly value. There are so
+                    many things that are difficult to explain in just a
+                    few words, but I hope you understand that your presence
+                    has made many ordinary days feel much more special.
+                </p>
+
+                <p>
+                    I appreciate the moments when you make me smile, the
+                    times when you listen, the memories we create and all
+                    those small things that may seem simple but actually
+                    mean a lot. Life is made up of countless little moments,
+                    and I am grateful for the beautiful ones that I have
+                    been able to share with you.
+                </p>
+
+                <p>
+                    On your birthday, I hope you receive all the happiness,
+                    success, peace and beautiful opportunities that you
+                    deserve. I hope you continue chasing your dreams,
+                    believing in yourself and becoming the person you want
+                    to be. We might not talk much, but the way you make me 
+                    feel is beyond words.
+                </p> 
+
+                <p>
+                    So today, forget the worries for a while, enjoy every
+                    little moment, smile as much as possible and celebrate
+                    yourself. Happy Birthday once again! MY LOVE🎂🎉
+                </p>
+
+            </div>
+
+            <div class="final-love">
+                HAPPY BIRTHDAY JANAAB❤️
+            </div>
+
+            <p class="tap-hint">
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

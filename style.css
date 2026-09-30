@@ -1,0 +1,1358 @@
+/* =========================
+   BASIC SETTINGS
+========================= */
+
+/* =========================
+   BASIC SETTINGS
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    overflow: hidden;
+    background: #16001f;
+    color: white;
+}
+
+
+
+/* =========================
+   PAGE SYSTEM
+========================= */
+
+.page {
+    position: fixed;
+
+    width: 100%;
+    height: 100vh;
+
+    top: 0;
+    left: 0;
+
+    display: none;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+
+    text-align: center;
+
+    overflow-y: auto;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #6c1b75,
+            #26002f 45%,
+            #100014
+        );
+
+    z-index: 1;
+}
+
+.page.active {
+    display: flex;
+
+    animation: pageAppear 0.8s ease;
+}
+
+@keyframes pageAppear {
+
+    from {
+        opacity: 0;
+        transform: scale(1.08);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.content {
+    width: 100%;
+    max-width: 800px;
+
+    position: relative;
+
+    z-index: 5;
+}
+
+.card {
+    width: 100%;
+    max-width: 430px;
+
+    padding: 45px 30px;
+
+    border-radius: 30px;
+
+    background: rgba(255, 255, 255, 0.12);
+
+    backdrop-filter: blur(15px);
+
+    box-shadow:
+        0 0 50px rgba(255, 100, 200, 0.3);
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+
+/* =========================
+   HEADINGS
+========================= */
+
+h1 {
+    font-size: clamp(35px, 7vw, 65px);
+
+    margin-bottom: 15px;
+
+    text-shadow:
+        0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+h2 {
+    font-size: clamp(20px, 4vw, 30px);
+
+    margin-bottom: 25px;
+}
+
+p {
+    line-height: 1.7;
+}
+
+
+/* =========================
+   EMOJIS
+========================= */
+
+.emoji {
+    font-size: 70px;
+
+    margin-bottom: 20px;
+
+    animation:
+        floating 3s ease-in-out infinite;
+}
+
+.big {
+    font-size: 90px;
+}
+
+@keyframes floating {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+}
+
+
+/* =========================
+   PASSWORD
+========================= */
+
+.password-card input {
+
+    width: 100%;
+
+    padding: 16px;
+
+    margin: 20px 0;
+
+    border: none;
+
+    outline: none;
+
+    border-radius: 15px;
+
+    font-size: 18px;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.9);
+
+    color: #400047;
+}
+
+.small-text {
+    opacity: 0.8;
+
+    font-size: 14px;
+}
+
+#passwordMessage {
+
+    margin-top: 12px;
+
+    min-height: 25px;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+button {
+
+    border: none;
+
+    outline: none;
+
+    padding: 15px 30px;
+
+    border-radius: 30px;
+
+    background: linear-gradient(
+        135deg,
+        #ff4f9a,
+        #ff82bd
+    );
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 25px rgba(255, 60, 150, 0.35);
+
+    transition: 0.3s;
+
+}
+
+button:hover {
+
+    transform: scale(1.08);
+
+    box-shadow:
+        0 10px 35px rgba(255, 80, 170, 0.6);
+}
+
+button:active {
+
+    transform: scale(0.95);
+}
+
+
+/* =========================
+   INTRODUCTION
+========================= */
+
+.intro-text {
+
+    max-width: 650px;
+
+    margin: 15px auto;
+
+    font-size: 18px;
+
+    opacity: 0.9;
+}
+
+.title {
+
+    animation:
+        titleGlow 2s infinite alternate;
+}
+
+@keyframes titleGlow {
+
+    from {
+        text-shadow:
+            0 0 10px #ff6bb5;
+    }
+
+    to {
+        text-shadow:
+            0 0 35px #ffb5db;
+    }
+
+}
+
+
+/* =========================
+   CAKE PAGE
+========================= */
+
+.instruction {
+
+    margin-bottom: 20px;
+
+    font-size: 18px;
+}
+
+#countdown {
+
+    font-size: 55px;
+
+    font-weight: bold;
+
+    height: 70px;
+
+    text-shadow:
+        0 0 20px #fff;
+}
+
+
+/* =========================
+   CAKE
+========================= */
+
+.cake-area {
+
+    position: relative;
+
+    width: 300px;
+
+    height: 330px;
+
+    margin: 10px auto 25px;
+
+    cursor: pointer;
+
+    user-select: none;
+
+    transition: 0.3s;
+}
+
+.cake-area:active {
+
+    transform: scale(0.95);
+}
+
+
+/* =========================
+   CANDLES
+========================= */
+
+.candles {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    display: flex;
+
+    gap: 25px;
+
+    align-items: flex-end;
+
+    z-index: 4;
+}
+
+.candle {
+
+    position: relative;
+
+    width: 22px;
+
+    height: 90px;
+
+    background:
+        repeating-linear-gradient(
+            45deg,
+            #ff7ab8,
+            #ff7ab8 10px,
+            #fff 10px,
+            #fff 20px
+        );
+
+    border-radius: 8px;
+
+    transition: 0.5s;
+}
+
+.flame {
+
+    position: absolute;
+
+    width: 22px;
+
+    height: 32px;
+
+    top: -30px;
+
+    left: 0;
+
+    border-radius:
+        50% 50% 50% 50%;
+
+    background: #ffd43b;
+
+    box-shadow:
+        0 0 20px #ffb300,
+        0 0 40px #ff7b00;
+
+    animation:
+        flame 0.5s infinite alternate;
+}
+
+@keyframes flame {
+
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(0.8) translateY(-2px);
+    }
+
+}
+
+
+/* Candle goes out */
+
+.candle.off .flame {
+
+    display: none;
+}
+
+.candle.off {
+
+    opacity: 0.55;
+}
+
+
+/* =========================
+   CAKE AREA
+========================= */
+
+.cake-area {
+
+    position: relative;
+
+    width: 300px;
+
+    height: 280px;
+
+    margin: 20px auto;
+
+    cursor: pointer;
+
+    user-select: none;
+
+}
+
+
+/* =========================
+   CANDLES
+========================= */
+
+.candles {
+
+    position: absolute;
+
+    /*
+       IMPORTANT:
+       Candles are placed directly
+       on top of the cake.
+    */
+
+    bottom: 140px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    z-index: 5;
+}
+
+
+.candle {
+
+    position: relative;
+
+    width: 22px;
+
+    height: 65px;
+
+    border-radius: 6px;
+
+    background:
+        repeating-linear-gradient(
+            45deg,
+            #ff75b6,
+            #ff75b6 8px,
+            #ffffff 8px,
+            #ffffff 16px
+        );
+
+}
+
+
+/* =========================
+   FLAME
+========================= */
+
+.flame {
+
+    position: absolute;
+
+    width: 18px;
+
+    height: 28px;
+
+    left: 2px;
+
+    top: -25px;
+
+    border-radius:
+        50% 50% 50% 50%;
+
+    background: #ffd43b;
+
+    box-shadow:
+        0 0 15px #ffb300,
+        0 0 30px #ff7b00;
+
+    animation:
+        flameAnimation 0.45s
+        infinite alternate;
+}
+
+
+@keyframes flameAnimation {
+
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform:
+            scale(0.8)
+            translateY(-2px);
+    }
+
+}
+
+
+/* =========================
+   CANDLE OFF
+========================= */
+
+.candle.off .flame {
+
+    display: none;
+
+}
+
+
+/* =========================
+   CAKE
+========================= */
+
+.cake {
+
+    position: absolute;
+
+    bottom: 0;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 240px;
+
+    height: 145px;
+
+}
+
+
+/* Cake top */
+
+.cake-top {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 45px;
+
+    background: #ff8fbd;
+
+    border-radius: 50%;
+
+}
+
+
+/* Cake body */
+
+.cake-body {
+
+    position: absolute;
+
+    top: 22px;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 120px;
+
+    background:
+        linear-gradient(
+            #ff73ad,
+            #d93479
+        );
+
+    border-radius:
+        15px 15px 25px 25px;
+
+}
+
+
+/* Cream */
+
+.cream {
+
+    position: absolute;
+
+    top: 20px;
+
+    left: 15px;
+
+    width: calc(100% - 30px);
+
+    height: 20px;
+
+    background: #ffffff;
+
+    border-radius: 50%;
+
+    z-index: 2;
+
+}
+
+
+/*
+   No cake emoji here.
+*/
+
+
+/* =========================
+   COUNTDOWN
+========================= */
+
+#countdown {
+
+    height: 70px;
+
+    font-size: 55px;
+
+    font-weight: bold;
+
+    text-shadow:
+        0 0 20px white;
+
+}
+
+
+/* =========================
+   HAPPY BIRTHDAY
+========================= */
+
+.birthday-message {
+
+    opacity: 0;
+
+    transform: scale(0.05);
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    margin: 20px auto;
+
+    text-shadow:
+        0 0 15px #ff7fbd;
+
+}
+
+
+.birthday-message.show {
+
+    animation:
+        birthdayZoom
+        3.2s
+        cubic-bezier(.17,.67,.31,1.5)
+        forwards;
+
+}
+
+
+@keyframes birthdayZoom {
+
+    0% {
+
+        opacity: 0;
+
+        transform: scale(0.05);
+
+        font-size: 15px;
+
+    }
+
+    20% {
+
+        opacity: 1;
+
+        transform: scale(0.3);
+
+    }
+
+    45% {
+
+        transform: scale(1);
+
+    }
+
+    70% {
+
+        transform: scale(1.8);
+
+    }
+
+    100% {
+
+        opacity: 1;
+
+        transform: scale(1.2);
+
+        font-size: 60px;
+
+    }
+
+}
+
+
+/* =========================
+   BIRTHDAY MESSAGE
+========================= */
+
+.birthday-message {
+
+    opacity: 0;
+
+    transform: scale(0.1);
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    margin: 20px 0;
+
+    text-shadow:
+        0 0 10px #ff8ac5;
+
+    pointer-events: none;
+}
+
+.birthday-message.show {
+
+    animation:
+        birthdayZoom 3s
+        cubic-bezier(.17,.67,.31,1.5)
+        forwards;
+}
+
+@keyframes birthdayZoom {
+
+    0% {
+        opacity: 0;
+        transform: scale(0.1);
+        font-size: 15px;
+    }
+
+    20% {
+        opacity: 1;
+        transform: scale(0.5);
+    }
+
+    50% {
+        transform: scale(1.5);
+    }
+
+    75% {
+        transform: scale(2.5);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1.2);
+        font-size: 60px;
+    }
+
+}
+
+
+/* =========================
+   HIDDEN
+========================= */
+
+.hidden {
+
+    display: none !important;
+}
+
+
+/* =========================
+   VIDEO
+========================= */
+
+.video-intro {
+
+    margin-bottom: 20px;
+}
+
+.video-section {
+
+    display: flex;
+
+    justify-content: center;
+
+    margin: 20px auto;
+}
+
+.birthday-video {
+
+    width: min(90vw, 360px);
+
+    aspect-ratio: 9 / 16;
+
+    object-fit: cover;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 0 35px rgba(255, 100, 190, 0.5);
+
+    background: black;
+}
+
+
+/* =========================
+   VIDEO PAGE
+========================= */
+
+.video-page {
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+
+.video-title {
+
+    margin-bottom: 10px;
+
+    animation:
+        titleGlow 1.8s
+        infinite alternate;
+
+}
+
+
+.video-message {
+
+    max-width: 600px;
+
+    margin: 0 auto 20px;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+    opacity: 0.9;
+
+}
+
+
+/* =========================
+   9:16 VIDEO
+========================= */
+
+.video-section {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    margin: 10px auto 20px;
+
+}
+
+
+.birthday-video {
+
+    width: 250px;
+
+    height: 445px;
+
+    aspect-ratio: 9 / 16;
+
+    object-fit: cover;
+
+    border-radius: 25px;
+
+    background: #000;
+
+    box-shadow:
+        0 0 35px rgba(
+            255,
+            100,
+            190,
+            0.55
+        );
+
+}
+
+
+/* =========================
+   TAP HINT
+========================= */
+
+.tap-hint {
+
+    margin-top: 20px;
+
+    font-size: 14px;
+
+    opacity: 0.65;
+
+}
+
+
+/* =========================
+   ZOOM I LOVE YOU
+========================= */
+
+.tap-love {
+
+    position: fixed;
+
+    left: 50%;
+
+    top: 50%;
+
+    transform:
+        translate(-50%, -50%)
+        scale(0.05);
+
+    z-index: 100;
+
+    font-size:
+        clamp(30px, 8vw, 80px);
+
+    font-weight: bold;
+
+    color: white;
+
+    white-space: nowrap;
+
+    text-shadow:
+        0 0 15px #ff63ae,
+        0 0 40px #ff63ae,
+        0 0 70px #ff63ae;
+
+    pointer-events: none;
+
+    animation:
+        tapZoom 1.5s
+        ease forwards;
+
+}
+
+
+@keyframes tapZoom {
+
+    0% {
+
+        opacity: 0;
+
+        transform:
+            translate(-50%, -50%)
+            scale(0.05);
+
+    }
+
+    25% {
+
+        opacity: 1;
+
+        transform:
+            translate(-50%, -50%)
+            scale(0.7);
+
+    }
+
+    55% {
+
+        transform:
+            translate(-50%, -50%)
+            scale(1.3);
+
+    }
+
+    100% {
+
+        opacity: 0;
+
+        transform:
+            translate(-50%, -50%)
+            scale(2.1);
+
+    }
+
+}
+
+
+/* =========================
+   CONTINUOUS HEARTS
+========================= */
+
+#hearts-container {
+
+    position: fixed;
+
+    inset: 0;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+    z-index: 50;
+
+}
+
+
+.heart {
+
+    position: absolute;
+
+    bottom: -50px;
+
+    opacity: 0.85;
+
+    animation:
+        heartFloat
+        linear
+        forwards;
+
+}
+
+
+@keyframes heartFloat {
+
+    0% {
+
+        transform:
+            translateY(0)
+            rotate(0deg)
+            scale(0.7);
+
+        opacity: 0;
+
+    }
+
+    10% {
+
+        opacity: 1;
+
+    }
+
+    100% {
+
+        transform:
+            translateY(-110vh)
+            rotate(360deg)
+            scale(1.3);
+
+        opacity: 0;
+
+    }
+
+}
+
+
+/* =========================
+   FINAL PAGE
+========================= */
+
+.final-page {
+
+    padding-top: 30px;
+
+    padding-bottom: 50px;
+}
+
+.long-message {
+
+    max-width: 750px;
+
+    margin: 25px auto;
+
+    padding: 30px;
+
+    border-radius: 25px;
+
+    background: rgba(255, 255, 255, 0.1);
+
+    backdrop-filter: blur(10px);
+
+    text-align: left;
+
+    line-height: 1.9;
+
+    font-size: 17px;
+}
+
+.long-message p {
+
+    margin-bottom: 22px;
+}
+
+.final-love {
+
+    font-size: clamp(25px, 6vw, 45px);
+
+    font-weight: bold;
+
+    animation:
+        finalZoom 2s infinite alternate;
+
+    text-shadow:
+        0 0 20px #ff70b5;
+}
+
+@keyframes finalZoom {
+
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.15);
+    }
+
+}
+
+.tap-message {
+
+    margin-top: 20px;
+
+    opacity: 0.7;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   FLOATING HEARTS
+========================= */
+
+#hearts-container {
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+    z-index: 20;
+}
+
+.heart {
+
+    position: absolute;
+
+    bottom: -50px;
+
+    font-size: 20px;
+
+    animation:
+        heartFloat linear forwards;
+
+    opacity: 0.8;
+}
+
+@keyframes heartFloat {
+
+    0% {
+
+        transform:
+            translateY(0)
+            rotate(0deg)
+            scale(0.7);
+
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    100% {
+
+        transform:
+            translateY(-110vh)
+            rotate(360deg)
+            scale(1.4);
+
+        opacity: 0;
+    }
+
+}
+
+
+/* =========================
+   TAP MESSAGE
+========================= */
+
+.tap-love {
+
+    position: fixed;
+
+    left: 50%;
+
+    top: 50%;
+
+    transform:
+        translate(-50%, -50%)
+        scale(0.1);
+
+    z-index: 100;
+
+    font-size: clamp(30px, 8vw, 80px);
+
+    font-weight: bold;
+
+    color: white;
+
+    text-shadow:
+        0 0 20px #ff63ae,
+        0 0 50px #ff63ae;
+
+    pointer-events: none;
+
+    animation:
+        tapZoom 1.5s ease forwards;
+}
+
+@keyframes tapZoom {
+
+    0% {
+
+        opacity: 0;
+
+        transform:
+            translate(-50%, -50%)
+            scale(0.1);
+    }
+
+    30% {
+
+        opacity: 1;
+
+        transform:
+            translate(-50%, -50%)
+            scale(1);
+    }
+
+    70% {
+
+        transform:
+            translate(-50%, -50%)
+            scale(1.5);
+    }
+
+    100% {
+
+        opacity: 0;
+
+        transform:
+            translate(-50%, -50%)
+            scale(2.2);
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .page {
+        padding: 15px;
+    }
+
+    .card {
+        padding: 35px 20px;
+    }
+
+    .cake-area {
+        transform: scale(0.85);
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .long-message {
+        padding: 20px;
+
+        font-size: 15px;
+    }
+
+    .birthday-message {
+        margin-top: 0;
+    }
+
+}
